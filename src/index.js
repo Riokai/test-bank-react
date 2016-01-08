@@ -5,7 +5,7 @@ import App from './components/Main';
 
 import Test from './components/TestComponent'
 
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
 
 // Render the main component into the dom
 // ReactDOM.render(<App />, document.getElementById('app'));
