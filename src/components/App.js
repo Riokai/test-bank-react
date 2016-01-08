@@ -6,12 +6,9 @@ import { Button } from 'react-bootstrap'
 
 require('normalize.css')
 require('bootstrap/dist/css/bootstrap.css')
-require('styles//App.scss')
+require('styles/App.scss')
 
 class AppComponent extends React.Component {
-  componentDidMount() {
-    document.title = '电子题库'
-  }
 
   render() {
     return (
