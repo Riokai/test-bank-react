@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "testBankReact",
+    "style": "scss",
+    "postcss": true
+  }
+}
