@@ -63,8 +63,11 @@ module.exports = {
         test: /\.styl/,
         loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
       },
+      // { test: /\.ttf$/,  loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
+      // { test: /\.eot$/,  loader: "file-loader" },
+      // { test: /\.svg$/,  loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.(png|jpg|gif|woff|woff2|ttf|eot|svg)$/,
         loader: 'url-loader?limit=8192'
       }
     ]
