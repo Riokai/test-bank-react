@@ -69,6 +69,8 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "core-js": "^2.0.0",
+    "font-awesome": "^4.5.0",
+    "jquery": "^2.1.4",
     "normalize.css": "^3.0.3",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.1",
