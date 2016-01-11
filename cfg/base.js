@@ -19,7 +19,9 @@ module.exports = {
     hot: true,
     port: port,
     publicPath: publicPath,
-    noInfo: false
+    // noInfo: false,
+    noInfo: true,
+    stats: { colors: true }
   },
   resolve: {
     extensions: [
@@ -63,10 +65,23 @@ module.exports = {
         test: /\.styl/,
         loader: 'style-loader!css-loader!postcss-loader!stylus-loader'
       },
+      // { test: /\.ttf$/,  loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
+      // { test: /\.eot$/,  loader: "file-loader" },
+      // { test: /\.svg$/,  loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        // test: /\.(png|jpg|gif|woff|woff2|ttf|eot|svg)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: 'url-loader?limit=8192'
-      }
+      },
+      //bootstrap
+      {test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/font-woff'},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=application/octet-stream'},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=8192&mimetype=image/svg+xml'},
+
+      //font-awesome
+      // { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=8192&minetype=application/font-woff" },
+      // { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
     ]
   },
   postcss: function () {
