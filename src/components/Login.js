@@ -1,9 +1,7 @@
 require('normalize.css')
 
 import React from 'react'
-import { Router } from 'react-router'
-
-console.log('router', Router.transitionTo);
+// import { Router } from 'react-router'
 
 class LoginComponent extends React.Component {
 
@@ -11,7 +9,7 @@ class LoginComponent extends React.Component {
     super(props);
 
     this.state = {
-      username: 'Kai',
+      username: '',
       password: ''
     }
   }
@@ -50,7 +48,7 @@ class LoginComponent extends React.Component {
         <div className="main-container">
       			<div className="main-content">
       				<div className="row">
-      					<div className="col-sm-10 col-sm-offset-1">
+      					<div className="col-sm-10">
       						<div className="login-container">
       							<div className="center">
       								<h1>
