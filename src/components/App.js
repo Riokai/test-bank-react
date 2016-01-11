@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { Button } from 'react-bootstrap'
+import router from '../services/router'
 
 require('normalize.css')
 require('bootstrap/dist/css/bootstrap.css')
@@ -11,6 +12,15 @@ require('styles/ace.min.css')
 require('font-awesome/css/font-awesome.css')
 
 class AppComponent extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    router.set(this.context.router)
+    router.get().pushState(null, '/login')
+  }
 
   render() {
 
@@ -30,7 +40,9 @@ class AppComponent extends React.Component {
 }
 
 AppComponent.displayName = 'AppComponent'
-
+AppComponent.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
 // Uncomment properties you need
 // AppComponent.propTypes = {}
 // AppComponent.defaultProps = {}
