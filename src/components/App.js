@@ -19,7 +19,7 @@ class AppComponent extends React.Component {
 
   componentDidMount() {
     router.set(this.context.router)
-    router.get().pushState(null, '/login')
+    // router.get().pushState(null, '/login')
   }
 
   render() {

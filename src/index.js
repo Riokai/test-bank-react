@@ -22,8 +22,7 @@ ReactDOM.render((
     <Route path="/" component={App}>
       <Route
         path="dashboard"
-        component={Main}
-        onEnter={requireAuth} />
+        component={Main} />
       <Route path="login" component={Login} />
     </Route>
     <Route path="/test" component={Test}></Route>

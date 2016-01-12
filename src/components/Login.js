@@ -1,6 +1,7 @@
 require('normalize.css')
 
 import React from 'react'
+import auth from '../services/auth'
 // import { Router } from 'react-router'
 
 class LoginComponent extends React.Component {
@@ -9,29 +10,15 @@ class LoginComponent extends React.Component {
     super(props);
 
     this.state = {
-      username: '',
-      password: ''
+      username: 'Jedeft',
+      password: 'admin'
     }
   }
 
-  handleSubmit(e) {
+  login(e) {
     e.preventDefault()
-    console.log('state', this.state)
-    fetch('http://121.42.216.103/testbank/permission/json_web_token', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        username: this.state.username,
-        password: this.state.password
-      })
-    }).then((res) => {
-      console.log(res);
-    }).catch((e) => {
-      console.log('error', e);
-    })
+
+    auth.login(this.state.username, this.state.password)
   }
 
   handleUsernameChange(e) {
@@ -69,7 +56,7 @@ class LoginComponent extends React.Component {
       											</h4>
       											<div className="space-6"></div>
 
-      											<form onSubmit={this.handleSubmit.bind(this)}>
+      											<form onSubmit={this.login.bind(this)}>
       												<fieldset>
       													<label className="block clearfix">
       														<span className="block input-icon input-icon-right">
