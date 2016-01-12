@@ -30,11 +30,16 @@ class Auth {
   }
 
   logout() {
+    localStorage.removeItem('token')
+
+    router.get().pushState(null, '/login')
 
   }
 
   isLogin() {
+    let token = localStorage.getItem('token')
 
+    return !!token
   }
 }
 
