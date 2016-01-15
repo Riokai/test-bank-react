@@ -2,6 +2,8 @@ require('normalize.css')
 
 import React from 'react'
 import auth from '../services/auth'
+
+require('styles/Login.scss')
 // import { Router } from 'react-router'
 
 class LoginComponent extends React.Component {
@@ -31,7 +33,7 @@ class LoginComponent extends React.Component {
 
   render() {
     return (
-      <div className="login">
+      <div className="login login-layout">
         <div className="main-container">
       			<div className="main-content">
       				<div className="row">
@@ -94,6 +96,20 @@ class LoginComponent extends React.Component {
       													<div className="space-4"></div>
       												</fieldset>
       											</form>
+      										</div>
+                          <div className="toolbar clearfix">
+      											<div>
+      												<a href="#" className="forgot-password-link">
+      													<i className="icon-arrow-left"></i>
+      													忘记密码
+      												</a>
+      											</div>
+      											<div>
+      												<a href="#" className="user-signup-link">
+      													注册
+      													<i className="icon-arrow-right"></i>
+      												</a>
+      											</div>
       										</div>
       									</div>
       								</div>

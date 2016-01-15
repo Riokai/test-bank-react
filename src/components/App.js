@@ -6,10 +6,10 @@ import { Button } from 'react-bootstrap'
 import router from '../services/router'
 
 require('normalize.css')
-require('bootstrap/dist/css/bootstrap.css')
+require('styles/bootstrap.min.css')
 require('styles/App.scss')
+require('styles/font-awesome.min.css')
 require('styles/ace.min.css')
-require('font-awesome/css/font-awesome.css')
 
 class AppComponent extends React.Component {
 
