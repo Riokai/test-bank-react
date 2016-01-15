@@ -4,20 +4,19 @@
 'use strict';
 
 // Uncomment the following lines to use the react test utilities
-// import React from 'react/addons';
-// const TestUtils = React.addons.TestUtils;
+// import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import Main from 'components/Main';
+import HeaderComponent from 'components//HeaderComponent.js';
 
-describe('MainComponent', () => {
-    let MainComponent;
+describe('HeaderComponent', () => {
+    let component;
 
     beforeEach(() => {
-      MainComponent = createComponent(Main);
+      component = createComponent(HeaderComponent);
     });
 
     it('should have its component name as default className', () => {
-      expect(MainComponent.props.className).to.equal('dashboard');
+      expect(component.props.className).to.equal('header-component');
     });
 });

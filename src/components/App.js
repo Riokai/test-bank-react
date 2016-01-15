@@ -1,8 +1,8 @@
 'use strict'
 
 import React from 'react'
-import { Link } from 'react-router'
-import { Button } from 'react-bootstrap'
+// import { Link } from 'react-router'
+// import { Button } from 'react-bootstrap'
 import router from '../services/router'
 
 require('normalize.css')
@@ -19,19 +19,23 @@ class AppComponent extends React.Component {
 
   componentDidMount() {
     router.set(this.context.router)
-    // router.get().pushState(null, '/login')
+    router.get().pushState(null, '/dashboard')
   }
 
   render() {
 
     return (
       <div className="app">
-        <Link to="/dashboard">
-          <Button bsStyle="default">dashboard</Button>
-        </Link>
-        <Link to="/login">
-          <Button bsStyle="primary">Login</Button>
-        </Link>
+        {
+          /*
+          <Link to="/dashboard">
+            <Button bsStyle="default">dashboard</Button>
+          </Link>
+          <Link to="/login">
+            <Button bsStyle="primary">Login</Button>
+          </Link>
+          */
+        }
 
         {this.props.children}
       </div>
