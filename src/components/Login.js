@@ -37,7 +37,7 @@ class LoginComponent extends React.Component {
         <div className="main-container">
       			<div className="main-content">
       				<div className="row">
-      					<div className="col-sm-10">
+      					<div className="col-sm-10" style={{width: '100%'}}>
       						<div className="login-container">
       							<div className="center">
       								<h1>
@@ -49,7 +49,7 @@ class LoginComponent extends React.Component {
       							</div>
       							<div className="space-6"></div>
       							<div className="position-relative">
-      								<div id="login-box" className="login-box visible widget-box no-border">
+      								<div id="login-box" style={{top: '70px'}} className="login-box visible widget-box no-border">
       									<div className="widget-body">
       										<div className="widget-main">
       											<h4 className="header blue lighter bigger">

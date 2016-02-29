@@ -79,7 +79,7 @@
     "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.6",
-    "react-router": "^2.0.0-rc4",
+    "react-router": "^2.0.0",
     "redux": "^3.0.5",
     "whatwg-fetch": "^0.10.1"
   }

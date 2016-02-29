@@ -4,7 +4,7 @@ import React from 'react';
 
 require('styles//Header.scss');
 
-let HeaderComponent = (props) => (
+let HeaderComponent = () => (
   <div className="header-component">
     <div className="navbar navbar-default" id="navbar">
 			<div className="navbar-container" id="navbar-container">

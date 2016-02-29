@@ -1,4 +1,4 @@
-import router from '../services/router'
+import { browserHistory } from 'react-router'
 import getService from '../config/api'
 
 class Auth {
@@ -20,7 +20,7 @@ class Auth {
       if (json.errorCode === 10000) {
         alert(json.msg)
         localStorage.setItem('token', json.token)
-        router.get().pushState(null, '/dashboard')
+        browserHistory.push('/dashboard')
       } else {
         alert(json.msg)
       }
@@ -28,12 +28,11 @@ class Auth {
       console.log('error', e)
     })
   }
-
+  // 退出登录
   logout() {
     localStorage.removeItem('token')
 
-    router.get().pushState(null, '/login')
-
+    browserHistory.push('/login')
   }
 
   isLogin() {

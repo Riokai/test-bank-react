@@ -7,7 +7,7 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import AppComponent from 'components//AppComponent.js';
+import AppComponent from 'components//App.js';
 
 describe('AppComponent', () => {
     let component;
@@ -17,6 +17,6 @@ describe('AppComponent', () => {
     });
 
     it('should have its component name as default className', () => {
-      expect(component.props.className).to.equal('app-component');
+      expect(component.props.className).to.equal('app');
     });
 });

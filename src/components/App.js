@@ -1,9 +1,10 @@
 'use strict'
 
 import React from 'react'
+import Auth from '../services/auth'
 // import { Link } from 'react-router'
 // import { Button } from 'react-bootstrap'
-import router from '../services/router'
+// import router from '../services/router'
 
 require('normalize.css')
 require('styles/bootstrap.min.css')
@@ -17,26 +18,22 @@ class AppComponent extends React.Component {
     super(props);
   }
 
+  // 判断是否已经登录
+  // 是：跳转到控制台
+  // 否：跳转到登录页面
   componentDidMount() {
-    router.set(this.context.router)
-    router.get().pushState(null, '/dashboard')
+    if (Auth.isLogin()) {
+      this.context.router.replace('/dashboard')
+    } else {
+      this.context.router.replace('/login')
+    }
+
   }
 
   render() {
 
     return (
       <div className="app">
-        {
-          /*
-          <Link to="/dashboard">
-            <Button bsStyle="default">dashboard</Button>
-          </Link>
-          <Link to="/login">
-            <Button bsStyle="primary">Login</Button>
-          </Link>
-          */
-        }
-
         {this.props.children}
       </div>
     )
