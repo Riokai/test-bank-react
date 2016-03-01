@@ -1,0 +1,134 @@
+/*reset*/
+ul, ol {list-style: none; margin: 0; padding: 0;}
+a:hover {text-decoration: none;}
+a:active {outline: none;}
+a:focus {outline: none;}
+body {font-size:14px;}
+
+/*课程建设*/
+.select-section {margin-bottom: 20px;}
+
+/*学院信息*/
+#upLoad {margin-top:4px;}
+#table-toolkit thead button {margin-left: 4px; color: #dd5a43!important; font-weight: bold; width:28px; height:24px;}
+#table-toolkit tbody a {margin-right: 8px;}
+
+/*通用样式*/
+.navbar-default {background: #3A93DC;}
+.page-header h1 {font-weight: bold;}
+.btn {border-radius:4px; margin: 0 2px;}
+#table-toolkit thead th:first-child {min-width:40px;}
+#table-toolkit thead tr {height:35px;}
+/*table thead th {text-align:center;}*/
+
+/* 考点规划 */
+.exam-point tbody tr td:nth-child(4) {max-width:240px; padding:5px 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.exam-rate span, .exam-rate2 span {color:#E99205; font-size:20px; line-height:30px;}
+
+/* 题库建设 */
+.single-choice input { margin:5px 0; width:100%; }
+.single-answer label {margin:2px 10px 10px 0; }
+
+/* 查看题库  */
+#numQuestion {width:60px; height: 34px; padding-left: 24px; border:1px solid #A9A9A9; border-left: none; border-right: none;}
+
+.question-item {position: relative; margin-bottom: 10px;}
+.question-num { position:absolute; top: 0; left: -29px; width: 30px; height: 30px; background-color: #F43C5E; color: #fff; text-align: center; line-height: 30px;}
+.question-header img {max-width: 100%;}
+.question-content {position:relative; width: 100%; height: auto; border: 1px solid #ccc; padding: 15px 20px 65px 15px;/* letter-spacing: 2px; */}
+.question-content:hover {border: 1px solid #3A93DC;}
+.question-answer input {position: relative; top: 1px; margin-right: 10px;}
+.question-answer li {}
+.question-choice {margin-top: 15px;}
+
+.pagination li:first-child {display:none;}
+
+.modal-question-header {border:1px solid #a9a9a9; margin-bottom:20px;}
+.modal-question-header:last-child {margin-bottom:0;}
+.modal-question-info {width:100%; height:34px; background-color:#ddf1fe; padding-left:20px; line-height:34px;}
+.modal-question-detail {padding:10px 20px;}
+.modal-question-detail img { max-width:100%; }
+.modal-lg {width:900px;}
+
+.question-option {position:absolute; left:0; bottom:0; width:100%; height:auto; padding:10px 10px; background-color:#e8e8e8;}
+.option-btn a {margin-right:15px;}
+.detail-rate span {font-size:15px; line-height:32px;}
+.icon-star, .icon-star-empty {color:#E99205;}
+
+/*手动组卷*/
+#ui-datepicker-div {z-index: 3000!important;}
+.method-item {position: relative; float: left;  margin: 10px;  color: #333; height: 130px; overflow: hidden;}
+.method-item .icon span {font-size:40px;}
+.method-info {position: relative; z-index: 1020; width: 140px; height: 130px; padding: 36px 10px;background-color: #E8E8E8;}
+.method-item .text span {font-size:16px; font-weight: bold;}
+.method-item:hover {overflow: visible;}
+.method-item:hover .method-info, .method-item.active .method-info{background-color: #1887E3; color: #fff;}
+/*.method-item .method-detail {position: absolute; bottom:100px; left: 0; z-index: 1000; padding: 10px; background-color: #000; color: #fff; width: 140px; height: 0; transition: all .5s ease-in-out; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -ms-transition: all .5s ease-in-out; }
+.method-item:hover .method-detail {height: 260px; bottom: 125px;}*/
+.method-detail {position: absolute; bottom: 180px; z-index: 1050; opacity: 0; filter:alpha(opacity=0); left: 50%; margin-left: -100px;; background-color: #000; width: 200px; font-size:14px; color: #fff; transition: bottom .5s ease-in, opacity .5s ease-in; -webkit-transition: bottom .5s ease-in, opacity .5s ease-in; -ms-transition: bottom .5s ease-in, opacity .5s ease-in; -moz-transition: bottom .5s ease-in, opacity .5s ease-in;}
+.method-detail .trangle { position: absolute; bottom: -20px; left: 50%; margin-left: -20px; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #000;}
+.method-detail dl {margin-bottom: 10px;}
+.method-detail dd {float: left; margin: 0 12px; }
+.method-item:hover .method-detail { bottom:150px; opacity: .8; filter:alpha(opacity=80);}
+
+.method-option {display: none; position: absolute; top: 0; left: 0; z-index: 1021; width: 140px;}
+.method-item:hover .method-option {display: block;}
+.method-option a {padding: 4px; margin:10px; cursor:pointer;}
+.method-option span {font-size: 20px; color: #fff;}
+.method-info .text {margin-top: 4px; cursor: default;}
+.method-detail p {margin-bottom: 2px; font-size: 12px;}
+#numQuestion {width:60px; height: 38px; padding-left: 24px; border:1px solid #A9A9A9; border-left: none; border-right: none; }
+.btn-group>.btn:first-child {margin-right: 0;}
+
+.choice-item {width: 21%; height: 30px; line-height: 30px; margin: 0 2%; background-color: #fff; float: left; text-align: center; border: 1px solid #d2d2d2; cursor: pointer;}
+.choice-item.active, .choice-item:hover {background-color: #2D7DED; color: #fff; border-color: #135CBE;}
+
+.content-end {padding: 30px 0;}
+
+/* 方案配置 */
+/*.set-slider span { float:left; }*/
+.set-slider {padding-top:10px;}
+.set-slider .slider {position:relative; top:5px;}
+.point-list li { float:left; margin:0 20px;}
+.point-item input {position:relative; top:2px;}
+
+/* 组卷结果 */
+.question-list {transition:all .5s ease-in-out;}
+.item-list-padding-lock {padding-right:180px;}
+.item-list-padding-unlock {padding-right:52px;}
+#examResult {position:fixed;  top:200px; width:170px;  border:2px solid #FF9308; transition:right .5s ease-in-out; }
+.panel-lock {right:0;}
+.panel-unlock { right:-128px; }
+.panel-unlock:hover {right:0;}
+.result-title {float:left; width:40px; height:310px; background-color:#DDF1FE; font-size:20px; padding-left:10px;}
+.result-title p:first-child {margin-top:20px;}
+.result-title a {color:#000; cursor:pointer;}
+.result-title p:last-child {margin-top:50px;}
+.result-option {float:right; width:126px; height:310px; text-align:center; padding-top:10px; background-color:#fff;}
+.result-option button, .result-option a {margin-top:12px;}
+.result-type p span:first-child {color:#f00;}
+
+
+#batchRow {padding:20px; padding-bottom:10px;}
+
+/*展开侧边栏*/
+.open .submenu {display:block !important;}
+
+.datepicker {height:32px;}
+/* Loading效果 */
+#backdrop {
+	display : none;
+	position: fixed; top: 0; left: 0; z-index: 2000;
+	width: 100%; height: 100%;
+	/*
+	background-color: #000;
+	opacity: .5; filter:alpha(opacity=50);
+	*/
+	text-align: center;
+}
+#backdrop span {
+	position: absolute; top: 50%; margin-top: -30px;
+	font-size: 60px; color: #00f;
+}
+
+.full-width {width:100%}
