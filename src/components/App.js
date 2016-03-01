@@ -11,6 +11,7 @@ require('styles/bootstrap.min.css')
 require('styles/App.scss')
 require('styles/font-awesome.min.css')
 require('styles/ace.min.css')
+require('styles/custom.css')
 
 class AppComponent extends React.Component {
 
