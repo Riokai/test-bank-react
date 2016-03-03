@@ -44,9 +44,6 @@ class AppComponent extends React.Component {
 AppComponent.displayName = 'AppComponent'
 AppComponent.contextTypes = {
   router: React.PropTypes.object.isRequired
-};
-// Uncomment properties you need
-// AppComponent.propTypes = {}
-// AppComponent.defaultProps = {}
+}
 
 export default AppComponent
