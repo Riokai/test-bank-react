@@ -21,7 +21,10 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <Route path="admin" component={Main}>
-        <Route path="admin_scheduleBuild" component={ScheduleBuild}></Route>
+        <Route
+          name="课表建设"
+          path="admin_scheduleBuild"
+          component={ScheduleBuild}></Route>
       </Route>
       <Route path="login" component={Login} />
     </Route>

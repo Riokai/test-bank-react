@@ -11,6 +11,7 @@ import Breadcrumb from './Breadcrumb'
 import PageContent from './PageContent'
 
 class AppComponent extends React.Component {
+
   render() {
     return (
       <div className="navbar-fixed">
@@ -21,7 +22,7 @@ class AppComponent extends React.Component {
           <div className="main-container-inner">
             <Sidebar />
             <div className="main-content">
-              <Breadcrumb />
+              <Breadcrumb data={this.props.routes} />
               <PageContent>
                 { this.props.children }
               </PageContent>
@@ -32,6 +33,8 @@ class AppComponent extends React.Component {
     );
   }
 }
+
+AppComponent.title = '首页'
 
 AppComponent.defaultProps = {
 };

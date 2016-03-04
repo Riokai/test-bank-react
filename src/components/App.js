@@ -26,8 +26,10 @@ class AppComponent extends React.Component {
   // 是：跳转到控制台
   // 否：跳转到登录页面
   componentDidMount() {
+    let currentPath = location.pathname
+
     if (Auth.isLogin()) {
-      this.context.router.replace('/admin')
+      this.context.router.replace(currentPath)
     } else {
       this.context.router.replace('/login')
     }

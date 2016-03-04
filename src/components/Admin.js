@@ -7,8 +7,6 @@ import MultipAdd from './MultipAdd'
 export class ScheduleBuild extends React.Component {
 
   render() {
-    console.log('build');
-
     const data = [
       {title: '单个添加'},
       {title: '批量添加'}
@@ -30,3 +28,5 @@ export class ScheduleBuild extends React.Component {
     )
   }
 }
+
+ScheduleBuild.title = '课表建设'
