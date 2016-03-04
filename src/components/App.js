@@ -27,7 +27,7 @@ class AppComponent extends React.Component {
   // 否：跳转到登录页面
   componentDidMount() {
     if (Auth.isLogin()) {
-      this.context.router.replace('/dashboard')
+      this.context.router.replace('/admin')
     } else {
       this.context.router.replace('/login')
     }

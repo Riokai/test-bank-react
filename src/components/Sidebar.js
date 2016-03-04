@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 class Sidebar extends React.Component {
 
@@ -50,13 +51,13 @@ class Sidebar extends React.Component {
         </div>
         <ul className="nav nav-list">
           <li className="active">
-            <a href="/etest/admin/admin_scheduleBuild" className="">
+            <Link to="/admin/admin_scheduleBuild" className="">
               <i className="icon-dashboard">
               </i>
               <span className="menu-text">
                 课表建设
               </span>
-            </a>
+            </Link>
             <ul className="submenu">
             </ul>
           </li>

@@ -3,10 +3,12 @@ require('styles/App.css');
 
 import React from 'react';
 
-// import { Link } from 'react-router'
-
 import Header from './HeaderComponent'
-import MainContainer from './MainContainer'
+
+import Sidebar from './Sidebar'
+// import MainContent from './MainContent'
+import Breadcrumb from './Breadcrumb'
+import PageContent from './PageContent'
 
 class AppComponent extends React.Component {
   render() {
@@ -15,7 +17,17 @@ class AppComponent extends React.Component {
         <div className="">
           <Header />
         </div>
-        <MainContainer />
+        <div className="main-container" id="main-container">
+          <div className="main-container-inner">
+            <Sidebar />
+            <div className="main-content">
+              <Breadcrumb />
+              <PageContent>
+                { this.props.children }
+              </PageContent>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

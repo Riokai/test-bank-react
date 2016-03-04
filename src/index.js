@@ -3,9 +3,9 @@ import React from 'react';
 import {render} from 'react-dom';
 import App from './components/App';
 
-import Test from './components/TestComponent'
 import Main from './components/Main'
 import Login from './components/Login'
+import {ScheduleBuild} from './components/Admin'
 
 import { Router, Route, browserHistory } from 'react-router'
 
@@ -20,9 +20,11 @@ import { Router, Route, browserHistory } from 'react-router'
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="dashboard" component={Main} />
+      <Route path="admin" component={Main}>
+        <Route path="admin_scheduleBuild" component={ScheduleBuild}></Route>
+      </Route>
       <Route path="login" component={Login} />
     </Route>
-    <Route path="/test" component={Test}></Route>
+    {/*<Route path="/test" component={Test}></Route>*/}
   </Router>
 ), document.getElementById('app'))
