@@ -3,7 +3,7 @@
 import React from 'react';
 
 let HeaderComponent = () => (
-  <div className="navbar navbar-default" id="navbar">
+  <div className="navbar navbar-default navbar-fixed-top" id="navbar">
 		<div className="navbar-container" id="navbar-container">
 			<div className="navbar-header pull-left">
 				<a href="#" className="navbar-brand">

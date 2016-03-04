@@ -14,10 +14,8 @@ class AppComponent extends React.Component {
 
   render() {
     return (
-      <div className="navbar-fixed">
-        <div className="">
-          <Header />
-        </div>
+      <div className="">
+        <Header />
         <div className="main-container" id="main-container">
           <div className="main-container-inner">
             <Sidebar />
