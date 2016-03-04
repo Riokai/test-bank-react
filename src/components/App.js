@@ -13,6 +13,9 @@ require('styles/font-awesome.min.css')
 require('styles/ace.min.css')
 require('styles/custom.css')
 
+require('styles/Header.scss')
+
+
 class AppComponent extends React.Component {
 
   constructor(props) {
