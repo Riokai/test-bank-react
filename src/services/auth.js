@@ -1,33 +1,29 @@
 import { browserHistory } from 'react-router'
 import getService from '../config/api'
+import { post } from 'superagent'
 
 class Auth {
   login(username, password) {
-    fetch(getService('login'), {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
+
+    post(getService('login'))
+      .send({
         username: username,
         password: password
       })
-    }).then((res) => {
-      return res.json()
-    }).then(function(json) {
-      console.log(json)
-      if (json.errorCode === 10000) {
-        alert(json.msg)
-        localStorage.setItem('token', json.token)
-        browserHistory.push('/dashboard')
-      } else {
-        alert(json.msg)
-      }
-    }).catch((e) => {
-      console.log('error', e)
-    })
+      .end((err, res) => {
+        if (err) console.log('login error:', err)
+
+        if (res.body.errorCode === 10000) {
+            // alert(res.body.msg)
+            localStorage.setItem('token', res.body.token)
+            browserHistory.push('/admin')
+          } else {
+            alert(res.body.msg)
+          }
+      })
+
   }
+  
   // 退出登录
   logout() {
     localStorage.removeItem('token')
