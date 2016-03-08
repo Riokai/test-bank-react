@@ -1,12 +1,15 @@
 require('normalize.css')
 
-import React from 'react'
-import auth from '../services/auth'
+import React, { Component } from 'react'
+// import auth from '../services/auth'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import * as UserAction from '../actions/user'
 
 require('styles/Login.scss')
 // import { Router } from 'react-router'
 
-class LoginComponent extends React.Component {
+class LoginComponent extends Component {
 
   constructor(props) {
     super(props);
@@ -19,8 +22,9 @@ class LoginComponent extends React.Component {
 
   login(e) {
     e.preventDefault()
-
-    auth.login(this.state.username, this.state.password)
+    // console.log(1);
+    this.props.actions.login(this.state.username, this.state.password)
+    // auth.login(this.state.username, this.state.password)
   }
 
   handleUsernameChange(e) {
@@ -124,7 +128,21 @@ class LoginComponent extends React.Component {
   }
 }
 
-LoginComponent.defaultProps = {
-};
+function mapStateToProps(state) {
+  return {
+    user: state.user
+  }
+}
 
-export default LoginComponent;
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(UserAction, dispatch)
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginComponent)
+
+// export default LoginComponent;
