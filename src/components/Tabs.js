@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 
-class Tabs extends React.Component {
+class Tabs extends Component {
   render() {
     return (
       <div className="row">

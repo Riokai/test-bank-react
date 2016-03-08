@@ -14,13 +14,7 @@ import { ScheduleBuild } from './components/Admin'
 
 import { Router, Route, browserHistory } from 'react-router'
 
-// let requireAuth = (nextState, replaceState) => {
-//   if (1) {
-//     replaceState({
-//       nextPathname: nextState.location.pathname
-//     }, '/login')
-//   }
-// }
+import DevTools from './containers/DevTools'
 
 const store = configureStore()
 
@@ -28,17 +22,19 @@ const history = syncHistoryWithStore(browserHistory, store)
 
 render((
   <Provider store={store}>
-    <Router history={history}>
-      <Route path="/" component={App}>
-        <Route path="admin" component={Main}>
-          <Route
-            name="课表建设"
-            path="admin_scheduleBuild"
-            component={ScheduleBuild}></Route>
+    <div>
+      <Router history={history}>
+        <Route path="/" component={App}>
+          <Route path="admin" component={Main}>
+            <Route
+              name="课表建设"
+              path="admin_scheduleBuild"
+              component={ScheduleBuild}></Route>
+          </Route>
+          <Route path="login" component={Login} />
         </Route>
-        <Route path="login" component={Login} />
-      </Route>
-      {/*<Route path="/test" component={Test}></Route>*/}
-    </Router>
+      </Router>
+      <DevTools />
+    </div>
   </Provider>
 ), document.getElementById('app'))

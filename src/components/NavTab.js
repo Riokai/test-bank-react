@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export class NavTab extends React.Component {
+export class NavTab extends Component {
 
   constructor() {
     super()
@@ -49,7 +49,7 @@ export class NavTab extends React.Component {
   }
 }
 
-export class NavTabItem extends React.Component {
+export class NavTabItem extends Component {
 
   render() {
 
